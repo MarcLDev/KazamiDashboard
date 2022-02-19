@@ -1,0 +1,176 @@
+.preloader {
+    height: 100%;
+    width: 100%;
+    background: var(--preloader);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    perspective: 1600px;
+    perspective-origin: 20% 50%;
+    transition: 0.5s all;
+    opacity: 1;
+}
+
+.spinner {
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    background: url(../media/kazami.png);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: spinning 3s infinite linear;
+}
+
+.preloader.fade {
+    opacity: 0
+}
+
+@keyframes spinning {
+    0%   {top: 0px; background: url(../media/loading.png)}
+    100% {top: 0px; background: url(../media/loading.png)}
+}
+    
+@keyframes comeUp {
+    from {
+        opacity: 0;
+        bottom: -50px;
+    }
+}
+
+@keyframes ico {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scrollbar-color: #353535 transparent;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: var(--scrollbar);
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    height: 12px;
+    background-clip: padding-box;
+}
+    
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-hover);
+}
+    
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--scrollbar-active);
+}
+
+body {
+    background: #202020;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+    background: #101010;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    align-items: center;
+}
+
+.header-menu-logo-img {
+    position: absolute;
+    height: 84px;
+    width: 84px;
+    top: 8px;
+    left: 8px;
+    border-radius: 50%;
+}
+
+.menu-items {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    right: 0;
+    padding-right: 100px;
+}
+
+.user-logo {
+    background-color: #090909;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.select-a-server {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #FFFFFF;
+    padding-top: 150px;
+    padding-left: 320px;
+}
+
+.server-selection {
+    padding-top: 20px;
+    padding-left: 360px;
+}
+
+.server {
+    height: 100px;
+    width: 1200px;
+    background: #151515;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: all .25s linear;
+}
+
+.server-logo {
+    background-color: #090909;
+    width: 84px;
+    height: 84px;
+    margin-left: 15px;
+    border-radius: 50%;
+}
+
+.server-name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    color: #FFFFFF;
+    padding-right: 20px;
+}
+
+.server:hover {
+    background: #344CA4;
+    transform: scale(1.05);
+    border-radius: 7px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.75);
+}
