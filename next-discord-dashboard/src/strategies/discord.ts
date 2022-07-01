@@ -26,6 +26,7 @@ passport.use(
                     { accessToken, refreshToken },
                     { new: true }
                 );
+                console.log(`Existing user: ${existingUser}`)
                 if(existingUser) return done(null, existingUser);
                 const newUser = new User({ discordId, accessToken, refreshToken });
                 const savedUser = await newUser.save();
