@@ -31,6 +31,8 @@ passport.use(
             profile: Profile,
             done: VerifyCallback
         ) => {
+            console.log(accessToken, refreshToken);
+            console.log(profile);
             const { id: discordId } = profile;
             try{
                 const existingUser = await User.findOneAndUpdate(
