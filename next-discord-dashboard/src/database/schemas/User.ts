@@ -1,12 +1,13 @@
 import mongoose, { Schema } from "mongoose";
 
-interface User {
+export interface User {
+    id: string;
     discordId: string;
     accessToken: string;
     refreshToken: string;
 }
 
-const UserSchema = new Schema({
+const UserSchema = new Schema<User>({
     discordId: {
         type: mongoose.SchemaTypes.String,
         required: true,
