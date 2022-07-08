@@ -15,4 +15,14 @@ async function main() {
     }
 }
 
+
+// import https from 'https';
+
+// setInterval(() => {
+//     https.get('https://Kazami-Support.marcl025.repl.co/', function(res){
+//         console.log('Status Code: ', res.statusCode);
+//     });
+// }, 30000);
+
+
 main();
