@@ -1,10 +1,8 @@
 import { Router } from "express";
-import { isAuthenticated } from '../../utils/middleWares';
+import { isAuthenticated } from '../../utils/middlewares';
+import { getGuildsController } from '../../controllers/guilds';
 const router = Router();
 
-router.get('/', isAuthenticated, (req, res, next) => {
-    console.log('Sucess');
-    res.send(200);
-});
+router.get('/', isAuthenticated, getGuildsController);
 
 export default router;
