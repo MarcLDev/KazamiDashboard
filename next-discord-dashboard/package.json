@@ -33,6 +33,7 @@
     "https": "^1.0.0",
     "mongoose": "^6.4.1",
     "passport": "^0.6.0",
-    "passport-discord": "^0.1.4"
+    "passport-discord": "^0.1.4",
+    "sass": "^1.53.0"
   }
 }
