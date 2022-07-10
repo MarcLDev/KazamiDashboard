@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'DM Sans';
+  font-family: 'Whitney';
   height: 100%;
   color: #fff;
 }
@@ -24,4 +24,10 @@ a {
   height: 100%;
   background-color: #1d1d1d;
   padding: 50px;
+}
+
+.aligned-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
